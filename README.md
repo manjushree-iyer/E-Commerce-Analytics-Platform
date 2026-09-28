@@ -1,3 +1,22 @@
+PROJECT STRUCTURE:
+
+Raw Retail Data
+      ↓
+Python / Pandas ETL
+      ↓
+MySQL Database
+      ↓
+SQL Analysis
+      ↓
+RFM + Customer Churn
+      ↓
+Machine Learning
+      ↓
+Power BI Dashboard
+      ↓
+Business Insights
+
+
 Pandas Cheat Sheet
 
 | Code                | Meaning              |
