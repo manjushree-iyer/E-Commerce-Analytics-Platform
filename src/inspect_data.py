@@ -88,7 +88,7 @@ df = pd.read_excel(file_path)
 # print()
 # print("Date range:")
 # print("Earliest date:", df["InvoiceDate"].min())
-# print("Latest date:", df["InvoiceDate"].max())
+# # print("Latest date:", df["InvoiceDate"].max())
 
 # # It checks whether an entire row has appeared previously with the same values across all columns.
 # print()
@@ -105,29 +105,38 @@ df = pd.read_excel(file_path)
 # print(df[df["Description"].isnull()].head(20))
 
 
-print()
-print("Missing Description + Price = 0:")
-print(
-    df[
-        (df["Description"].isnull()) &
-        (df["Price"] == 0)
-    ].shape[0]
-)
+# print()
+# print("Missing Description + Price = 0:")
+# print(
+#     df[
+#         (df["Description"].isnull()) &
+#         (df["Price"] == 0)
+#     ].shape[0]
+# )
+
+# print()
+# print("Missing Description + Missing Customer ID:")
+# print(
+#     df[
+#         (df["Description"].isnull()) &
+#         (df["Customer ID"].isnull())
+#     ].shape[0]
+# )
+
+# print()
+# print("Missing Description + Negative Quantity:")
+# print(
+#     df[
+#         (df["Description"].isnull()) &
+#         (df["Quantity"] < 0)
+#     ].shape[0]
+# )
 
 print()
-print("Missing Description + Missing Customer ID:")
+print("Price <= 0 but Description exists:")
 print(
     df[
-        (df["Description"].isnull()) &
-        (df["Customer ID"].isnull())
-    ].shape[0]
-)
-
-print()
-print("Missing Description + Negative Quantity:")
-print(
-    df[
-        (df["Description"].isnull()) &
-        (df["Quantity"] < 0)
-    ].shape[0]
+        (df["Price"] <= 0) &
+        (df["Description"].notnull())
+    ].head(20)
 )
