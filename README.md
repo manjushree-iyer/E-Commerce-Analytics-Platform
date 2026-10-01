@@ -26,5 +26,5 @@ Pandas Cheat Sheet
 | `df.tail()`         | Last 5 rows          |
 | `df.shape`          | Rows + columns       |
 | `df.columns`        | Column names         |
-| `df.isnull()`       | Find missing values  |
-| `df.isnull().sum()` | Count missing values |
+| `df.isnull()`       | Find the missing values  |
+| `df.isnull().sum()` | Count the missing values |
